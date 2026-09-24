@@ -212,27 +212,6 @@ a { color: var(--navy); }
 .impact-list li { margin-bottom: 0.55rem; padding-left: 0.2rem; }
 .impact-list li::marker { color: var(--gold); font-size: 1.2em; }
 
-/* Research questions */
-.questions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem 2.5rem;
-}
-.question { border-left: 2px solid var(--gold); padding-left: 1rem; }
-.question-tag {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin: 0 0 0.5rem;
-}
-.question-q { font-size: 1.05rem; font-weight: 500; margin: 0 0 0.4rem; }
-.question-detail { font-size: 0.92rem; color: var(--muted); margin: 0; }
-
-@media (max-width: 640px) {
-  .questions { grid-template-columns: 1fr; }
-}
-
 /* Use cases */
 .use-cases {
   list-style: none;
