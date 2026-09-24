@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>College-level Writing Dataset — University of Pittsburgh</title>
-<meta name="description" content="A dataset of authentic student drafts, instructor feedback, and conferencing dialogue, built to model how writing actually develops." />
+<title>Multimodal College-level Writing Dataset — University of Pittsburgh</title>
+<meta name="description" content="A dataset of authentic student essays, detailed instructor feedback, and audio recordings and transcripts of student–instructor conferences, built to model how writing actually develops." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,25 +18,25 @@
   <div class="wrap header-inner">
     <a class="brand" href="#top">
       <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-text">Writing&nbsp;Dataset</span>
+      <span class="brand-text">InspireWrite</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#why">Why it matters</a>
-      <a href="#comparison">Comparison</a>
-      <a href="#questions">Research questions</a>
-      <a href="#use-cases">Use cases</a>
+      <a href="#intro">What it is</a>
+      <a href="#impact">Intended impact</a>
+      <a href="#publications">Publications</a>
       <a href="#team">Team</a>
+      <a href="#sponsors">Sponsors</a>
     </nav>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav-mobile" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
   </div>
   <nav id="site-nav-mobile" class="site-nav-mobile" aria-label="Primary mobile">
-    <a href="#why">Why it matters</a>
-    <a href="#comparison">Comparison</a>
-    <a href="#questions">Research questions</a>
-    <a href="#use-cases">Use cases</a>
+    <a href="#intro">What it is</a>
+    <a href="#impact">Intended impact</a>
+    <a href="#publications">Publications</a>
     <a href="#team">Team</a>
+    <a href="#sponsors">Sponsors</a>
   </nav>
 </header>
 
@@ -44,112 +44,45 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <div class="wrap hero-inner">
-      <p class="eyebrow">NSF Tools Competition · Phase II</p>
-      <h1>College-level Writing Dataset</h1>
-      <p class="hero-lede">A dataset of authentic student drafts, instructor feedback, and conferencing dialogue — built to model how writing actually develops, not just how it's corrected.</p>
-
-      <div class="manuscript" role="img" aria-label="Sample essay excerpt showing a struck-through phrase, an inserted correction, and a handwritten margin comment from an instructor">
-        <div class="manuscript-page">
-          <p class="manuscript-text">
-            The final scene works because it <span class="strike">shows the theme</span><span class="insert">complicates the reader's sense</span> of isolation — the narrator is surrounded by people, yet the dialogue never lets her finish a sentence.
-          </p>
-        </div>
-        <div class="margin-note" aria-hidden="true">
-          <svg class="note-line" viewBox="0 0 60 40" preserveAspectRatio="none"><path d="M0,6 C30,6 20,30 58,32" fill="none" stroke="#B23A2E" stroke-width="1.5"/></svg>
-          <p class="note-text">Nice — now point to the specific line that does this.</p>
-        </div>
-      </div>
-      <p class="hero-caption">One draft. One instructor comment. Multiply by thousands of essays, revisions, and conference recordings — that's the dataset.</p>
+    <div class="wrap">
+      <h1>Multimodal College-level Writing Dataset</h1>
+      <p class="hero-lede">A dataset of authentic student essays, detailed instructor feedback, and transcripts of one-on-one student–instructor conferences. This is built to model how writing actually develops, not just how it's corrected.</p>
     </div>
   </section>
 
-  <!-- WHY IT MATTERS -->
-  <section class="section" id="why">
+  <!-- INTRODUCTION -->
+  <section class="section" id="intro">
     <div class="wrap">
-      <p class="section-label">Motivation &amp; intended impact</p>
-
-      <div class="problem">
-        <h2>The problem</h2>
-        <p>Existing writing datasets focus on surface-level error correction. They cannot model the deeper, iterative process through which writers develop ideas via feedback and real-time dialogue.</p>
-      </div>
-
-      <div class="stats" role="list">
-        <div class="stat" role="listitem">
-          <p class="stat-value">0</p>
-          <p class="stat-label">Public datasets capturing authentic instructional dialogue aligned with multi-draft essays</p>
+      <div class="components">
+        <div class="component">
+          <p class="component-label">Student essays</p>
+          <p class="component-detail">Multiple drafts of the same essay, collected as it's revised across a semester.</p>
         </div>
-        <div class="stat" role="listitem">
-          <p class="stat-value">11</p>
-          <p class="stat-label">Average instructor comments per essay — richer than any existing public dataset</p>
+        <div class="component">
+          <p class="component-label">Instructor feedback</p>
+          <p class="component-detail">Detailed written comments instructors leave directly on each draft — an average of 11 per essay.</p>
         </div>
-        <div class="stat" role="listitem">
-          <p class="stat-value">450<span class="stat-unit">hrs</span></p>
-          <p class="stat-label">Target audio of student–instructor conferences, a first at this scale</p>
+        <div class="component">
+          <p class="component-label">Conferencing dialogue</p>
+          <p class="component-detail">Transcripts of one-on-one conversations where the student and instructor discuss the essay and its feedback.</p>
         </div>
-      </div>
-
-      <div class="impact">
-        <h3>Intended impact</h3>
-        <ul class="impact-list">
-          <li>Enable AI systems that model higher-order writing development, not just grammar</li>
-          <li>Provide a public benchmark for evaluating and training educational AI feedback models</li>
-          <li>Support equity research on how feedback effectiveness varies across ESL learners, demographics, and institutions</li>
-          <li>Bridge learning sciences and NLP communities through open, multimodal data</li>
-        </ul>
       </div>
     </div>
   </section>
 
-  <!-- COMPARISON -->
-  <section class="section alt" id="comparison">
+  <!-- INTENDED IMPACT (combines motivation, research questions, use cases) -->
+  <section class="section alt" id="impact">
     <div class="wrap">
-      <p class="section-label">How it differs</p>
-      <h2>Compared to existing datasets</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Dataset</th>
-              <th scope="col">Essay scores</th>
-              <th scope="col">Higher-order feedback</th>
-              <th scope="col">Multi-draft</th>
-              <th scope="col">Audio dialogue</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">ASAP / ELLIPSE</th>
-              <td class="yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td>
-            </tr>
-            <tr>
-              <th scope="row">StoryFeedback</th>
-              <td class="no">✗</td><td class="partial">Partial (AI-generated)</td><td class="no">✗</td><td class="no">✗</td>
-            </tr>
-            <tr>
-              <th scope="row">LEAF</th>
-              <td class="no">✗</td><td class="partial">Sentence-level only</td><td class="no">✗</td><td class="no">✗</td>
-            </tr>
-            <tr>
-              <th scope="row">Prior revision datasets</th>
-              <td class="no">✗</td><td class="no">✗</td><td class="yes">✓</td><td class="no">✗</td>
-            </tr>
-            <tr class="highlight">
-              <th scope="row">This dataset</th>
-              <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="table-note">Gold row — this dataset.</p>
-    </div>
-  </section>
+      <h2>Intended impact</h2>
 
-  <!-- RESEARCH QUESTIONS -->
-  <section class="section" id="questions">
-    <div class="wrap">
-      <p class="section-label">What it enables</p>
-      <h2>Research questions</h2>
+      <ul class="impact-list">
+        <li>Enable AI systems that model higher-order writing development, not just grammar</li>
+        <li>Provide a public benchmark for evaluating and training educational AI feedback models</li>
+        <li>Support equity research on how feedback effectiveness varies across ESL learners, demographics, and institutions</li>
+        <li>Bridge learning sciences and NLP communities through open, multimodal data</li>
+      </ul>
+
+      <h3 class="block-label">Possible Research Questions</h3>
       <div class="questions">
         <div class="question">
           <p class="question-tag">Idea development</p>
@@ -172,14 +105,8 @@
           <p class="question-detail">Analyzing how real-time spoken interaction predicts subsequent written revision patterns.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- USE CASES -->
-  <section class="section alt" id="use-cases">
-    <div class="wrap">
-      <p class="section-label">Primary AI use cases</p>
-      <h2>What can be built on this data</h2>
+      <h3 class="block-label">Possible Use Cases</h3>
       <ul class="use-cases">
         <li><span class="uc-label">Automated essay scoring</span><span class="uc-sub">Rubric-aligned, trait-specific assessment</span></li>
         <li><span class="uc-label">Feedback generation</span><span class="uc-sub">Benchmarking AI vs. authentic instructor feedback</span></li>
@@ -191,6 +118,23 @@
     </div>
   </section>
 
+  <!-- PUBLICATIONS -->
+  <section class="section" id="publications">
+    <div class="wrap">
+      <p class="section-label">Publications</p>
+      <ul class="publications">
+        <li>
+          <a class="pub-title" href="https://arxiv.org/abs/2607.00274" target="_blank" rel="noopener">SEFORA: Student Essays with Feedback Corpus and LLM Feedback Evaluation Framework</a>
+          <span class="pub-venue">Under review</span>
+        </li>
+        <li>
+          <span class="pub-title pub-title-nolink">Evaluating Feedback Focus and Pedagogical Adaptivity in LLM-Generated Feedback on Student Writing</span>
+          <span class="pub-venue">AIME-Con 2026</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- TEAM -->
   <section class="section" id="team">
     <div class="wrap">
@@ -198,20 +142,38 @@
       <div class="team">
         <div class="person">
           <span class="person-initials">XL</span>
-          <p class="person-name">Dr. Xiang Lorraine Li <span class="person-role">(PI)</span></p>
-          <p class="person-dept">Computer Science</p>
+          <p class="person-name"><a class="person-link" href="https://people.cs.pitt.edu/~xianglli/" target="_blank" rel="noopener">Dr. Xiang Lorraine Li</a> <span class="person-role">(PI)</span></p>
+          <p class="person-dept">Department of Computer Science</p>
         </div>
         <div class="person">
           <span class="person-initials">DL</span>
-          <p class="person-name">Dr. Diane Litman</p>
-          <p class="person-dept">Computer Science &amp; Learning Research</p>
+          <p class="person-name"><a class="person-link" href="https://people.cs.pitt.edu/~litman/" target="_blank" rel="noopener">Dr. Diane Litman</a> <span class="person-role">(Co-PI)</span></p>
+          <p class="person-dept">Department of Computer Science / Learning Research &amp; Development Center</p>
         </div>
         <div class="person">
           <span class="person-initials">GR</span>
-          <p class="person-name">Dr. Gayle Rogers</p>
-          <p class="person-dept">English</p>
+          <p class="person-name"><a class="person-link" href="https://www.english.pitt.edu/people/gayle-rogers" target="_blank" rel="noopener">Dr. Gayle Rogers</a> <span class="person-role">(Co-PI)</span></p>
+          <p class="person-dept">Department of English</p>
+        </div>
+        <div class="person">
+          <span class="person-initials">RC</span>
+          <p class="person-name"><a class="person-link" href="https://www.dins.pitt.edu/people/raquel-coelho" target="_blank" rel="noopener">Raquel Coelho</a> <span class="person-role">(Co-PI)</span></p>
+          <p class="person-dept">Department of Informatics &amp; Networked Systems / Learning Research &amp; Development Center</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section class="section alt" id="sponsors">
+    <div class="wrap">
+      <p class="section-label">With support from</p>
+      <ul class="sponsors">
+        <li><a class="sponsor-name sponsor-link" href="https://www.cyber.pitt.edu/pcag" target="_blank" rel="noopener">Pitt Cyber Accelerator Grant</a></li>
+        <li><a class="sponsor-name sponsor-link" href="https://www.lrdc.pitt.edu/" target="_blank" rel="noopener">Learning Research &amp; Development Center at Pitt</a></li>
+        <li><a class="sponsor-name sponsor-link" href="https://tools-competition.org/winner/college-writing-dataset/" target="_blank" rel="noopener">Tools Competition</a></li>
+        <li><a class="sponsor-name sponsor-link" href="https://digitalpromise.org/2026/09/21/new-grantees-awarded-by-the-k-12-ai-infrastructure-program/?utm_source=gemini" target="_blank" rel="noopener">K-12 AI Infrastructure Program</a></li>
+      </ul>
     </div>
   </section>
 
@@ -219,8 +181,8 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <p>University of Pittsburgh · Department of English &amp; Computer Science</p>
-    <p class="footer-sub">Tools Competition, Phase II</p>
+    <p>University of Pittsburgh · School of Computing and Information and Department of English</p>
+    <p class="footer-sub">This website was built with Claude.</p>
   </div>
 </footer>
 
