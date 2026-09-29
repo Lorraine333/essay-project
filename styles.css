@@ -200,9 +200,16 @@ a { color: var(--navy); }
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--navy);
-  margin: 2.8rem 0 1.6rem;
+  margin: 2.8rem 0 0.8rem;
   padding-top: 2.2rem;
   border-top: 1px solid var(--rule);
+}
+.block-note {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: 0 0 1.6rem;
+  max-width: 56ch;
 }
 .impact-list {
   margin: 0;
@@ -308,6 +315,14 @@ a { color: var(--navy); }
   font-size: 0.8rem;
   color: var(--muted);
 }
+.pub-link {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--navy);
+  text-decoration: none;
+}
+.pub-link:hover,
+.pub-link:focus-visible { text-decoration: underline; }
 .pub-title {
   font-family: "Inter", system-ui, sans-serif;
   font-size: 0.98rem;
