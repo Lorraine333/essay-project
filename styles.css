@@ -296,6 +296,35 @@ a { color: var(--navy); }
   .team { grid-template-columns: 1fr; gap: 1.8rem; }
 }
 
+/* News */
+.news-item { max-width: 62ch; }
+.news-date {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.news-headline {
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.8rem;
+}
+.news-summary {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+.news-link {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--navy);
+  text-decoration: none;
+}
+.news-link:hover,
+.news-link:focus-visible { text-decoration: underline; }
+
 /* Publications */
 .publications {
   list-style: none;
